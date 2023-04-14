@@ -23,6 +23,9 @@
     <script>
       window.addEventListener("load", (event) => {
         main();
+        if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("/sw.js");
+        }
       });
 
       function main() {
