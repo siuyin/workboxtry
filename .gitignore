@@ -1,2 +1,4 @@
 *.swp
 *secret*
+server-key.pem
+server.pem

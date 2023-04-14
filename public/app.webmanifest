@@ -1,0 +1,12 @@
+{
+	"name":"Add two numbers",
+	"short_name":"Sum",
+	"icons": [
+		{"src":"/icons/maskable_icon_x512.png","sizes":"512x512","purpose":"maskable"},
+		{"src":"/icons/maskable_icon_x192.png","sizes":"192x192","purpose":"any"}
+	],
+	"start_url":"http://localhost:8080/",
+	"background_color":"teal",
+	"theme_color":"teal",
+	"display":"standalone"
+}
