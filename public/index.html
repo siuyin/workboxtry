@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A progressive web app example.">
+    <title>Sum</title>
+    <style>
+      body {font-family: sans-serif; font-size: large;}
+      *.num {font-size: x-large; width: 4em;}
+    </style>
+  </head>
+  <body>
+    <h1>Addition</h1>
+    <form>
+      <div>
+        <input type="number" id="a" class="num" value=2 aria-label="first number">
+        +
+        <input type="number" id="b" class="num" value=3 aria-label="second number">
+        =
+        <span class="num" id="result"></span>
+      </div>
+    </form>
+    <script>
+      window.addEventListener("load", (event) => {
+        main();
+      });
+
+      function main() {
+        let a = document.querySelector("#a");
+        let b = document.querySelector("#b");
+        let result = document.querySelector("#result");
+
+        let compute = () => {
+          let aa = parseFloat(a.value)
+          bb = parseFloat(b.value)
+          let res = aa+bb;
+          if (isNaN(res)) res = 0;
+          result.innerHTML = res;
+        }
+        compute();
+
+        a.addEventListener("change",compute);
+        b.addEventListener("change",compute);
+      }
+    </script>
+  </body>
+</html>
